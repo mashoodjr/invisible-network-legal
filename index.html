@@ -1,5 +1,116 @@
-<h1>Invisible Network</h1>
-<p>A personal automation tool that prepares video clips and uploads them to
-the owner's own social accounts for review and publishing.</p>
-<p><a href="terms.html">Terms of Service</a> ·
-<a href="privacy.html">Privacy Policy</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invisible Network — Automated Video Clip Publishing</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    line-height: 1.6;
+  }
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px; border-bottom: 1px solid #21262d;
+  }
+  nav .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 18px; }
+  nav .brand img { width: 40px; height: 40px; border-radius: 10px; }
+  nav a { color: #8b949e; text-decoration: none; margin-left: 20px; font-size: 14px; }
+  nav a:hover { color: #e6edf3; }
+  header {
+    max-width: 760px; margin: 0 auto; padding: 72px 24px 48px; text-align: center;
+  }
+  header img.logo { width: 120px; height: 120px; border-radius: 28px; }
+  header h1 { font-size: 40px; margin: 24px 0 12px; }
+  header p { font-size: 18px; color: #8b949e; }
+  main { max-width: 760px; margin: 0 auto; padding: 0 24px 64px; }
+  section { margin-bottom: 48px; }
+  h2 { font-size: 24px; margin-bottom: 12px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .card {
+    background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 20px;
+  }
+  .card h3 { font-size: 16px; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: #8b949e; }
+  ol.steps { padding-left: 20px; color: #8b949e; }
+  ol.steps li { margin-bottom: 10px; }
+  ol.steps b { color: #e6edf3; }
+  footer {
+    border-top: 1px solid #21262d; padding: 24px 32px; text-align: center;
+    color: #8b949e; font-size: 13px;
+  }
+  footer a { color: #8b949e; margin: 0 12px; }
+  @media (max-width: 600px) { .cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav>
+  <div class="brand"><img src="favicon.png" alt="Invisible Network logo"> Invisible Network</div>
+  <div>
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<header>
+  <img class="logo" src="favicon.png" alt="Invisible Network">
+  <h1>Invisible Network</h1>
+  <p>An automated publishing pipeline that turns trending video topics
+  into finished, narrated clips — then delivers them to YouTube and TikTok
+  for review.</p>
+</header>
+
+<main>
+<section id="features">
+  <h2>What it does</h2>
+  <div class="cards">
+    <div class="card"><h3>Topic discovery</h3><p>Surveys trending and popular
+    videos across configured regions and categories — news, sports,
+    technology, documentaries and reviews.</p></div>
+    <div class="card"><h3>Clip production</h3><p>Cuts highlights, adds spoken
+    commentary, thumbnails, watermarking and subscribe cards — ready to
+    publish.</p></div>
+    <div class="card"><h3>Review-first uploads</h3><p>Finished clips are
+    uploaded privately to YouTube and to the TikTok drafts inbox, so every
+    video is reviewed before it goes public.</p></div>
+    <div class="card"><h3>Weekly recap</h3><p>Automatically compiles the
+    week's segments into a long-form recap episode every Sunday.</p></div>
+  </div>
+</section>
+
+<section id="how">
+  <h2>How the TikTok integration works</h2>
+  <ol class="steps">
+    <li><b>Authorize.</b> The app uses TikTok Login Kit (OAuth 2.0 with
+    PKCE) to connect the owner's own TikTok account.</li>
+    <li><b>Upload.</b> Each day the highest-performing clip is re-cut to
+    vertical format and sent through the Content Posting API
+    (<code>video.upload</code>) to the account's TikTok inbox.</li>
+    <li><b>Review &amp; publish.</b> The clip arrives as a draft; the owner
+    edits, captions and publishes it manually in the TikTok app.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>About</h2>
+  <p style="color:#8b949e">Invisible Network is a personal automation
+  project operated by its owner for a single TikTok and YouTube account.
+  It is not a public service and does not collect user data. For details,
+  see the <a href="terms.html" style="color:#e6edf3">Terms of Service</a>
+  and <a href="privacy.html" style="color:#e6edf3">Privacy Policy</a>.</p>
+</section>
+</main>
+
+<footer>
+  © 2026 Invisible Network ·
+  <a href="terms.html">Terms of Service</a>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+</body>
+</html>
